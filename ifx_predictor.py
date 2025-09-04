@@ -1,5 +1,3 @@
-.. code:: ipython3
-
     # ifx_predictor
     import streamlit as st
     import pandas as pd
