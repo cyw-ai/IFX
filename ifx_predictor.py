@@ -1,21 +1,21 @@
-    # ifx_predictor
-    import streamlit as st
-    import pandas as pd
-    import joblib
-    import numpy as np
-    from sklearn.preprocessing import MinMaxScaler
-    import traceback
+# ifx_predictor
+import streamlit as st
+ import pandas as pd
+ import joblib
+ import numpy as np
+ from sklearn.preprocessing import MinMaxScaler
+ import traceback
     
     # 配置页面
-    st.set_page_config(
-        page_title="IFX药物浓度预测系统",
-        page_icon="💊",
-        layout="wide"
+ st.set_page_config(
+     page_title="IFX药物浓度预测系统",
+    page_icon="💊",
+    layout="wide"
     )
     
     # 加载预训练组件
-    @st.cache_resource
-    def load_components():
+@st.cache_resource
+def load_components():
         try:
             model = joblib.load(r'C:\Users\cyw\ifx_ensemble_model.pkl')
             scaler = joblib.load(r'C:\Users\cyw\ifx_scaler.pkl')
